@@ -1,5 +1,5 @@
 % -*- mode: Matlab -*-
-% Time-stamp: "2014-06-13 14:50:16 sb"
+% Time-stamp: "2014-06-13 15:45:24 sb"
 
 %  file       Fit1D.m
 %  copyright  (c) Sebastian Blatt 2011, 2012, 2013, 2014
@@ -30,7 +30,7 @@ function fitresult = Fit1D(data, model),
   % Need this kludge, otherwise the inline functions will fail, since
   % INLINEEVAL is used and the 'private' subdirectory does not seem to be
   % accessible from the inline function.
-  addpath(fullfile('code', 'Fit_Functions'));
+  addpath(fullfile('matlab-fit', 'Fit_Functions'));
 
   % Allow data to be a simple vector of y-values (assumes x-values =
   % 1:length(data), or use a matrix of two rows, where the first (second)

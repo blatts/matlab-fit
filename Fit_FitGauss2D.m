@@ -1,8 +1,8 @@
 % -*- mode: Matlab -*-
-% Time-stamp: "2011-09-26 14:14:24 sb"
+% Time-stamp: "2014-06-13 15:03:03 sb"
 
 %  file       Fit_FitGauss2D.m
-%  copyright  (c) Sebastian Blatt 2011
+%  copyright  (c) Sebastian Blatt 2011, 2012, 2013, 2014
 
 %
 %  This file is licensed under the Creative Commons Attribution 3.0
@@ -15,7 +15,7 @@ function [p,dp,cov,res] = Fit_FitGauss2D(data)
   %  e = sqrt(data);
   e = ones(size(data));
   dim = size(data);
-  s = BlastiaImageStatistics(data);
+  s = Fit_ImageStatistics(data);
 %   fprintf('Image statistics:\n');
 %   fprintf('  Min, Max        : %f, %f\n',s(1),s(4));
 %   fprintf('  Median, Mean    : %f, %f\n',s(2),s(3));

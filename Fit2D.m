@@ -1,8 +1,8 @@
 % -*- mode: Matlab -*-
-% Time-stamp: "2013-07-13 18:47:46 sb"
+% Time-stamp: "2014-06-13 15:45:31 sb"
 
 %  file       Fit2D.m
-%  copyright  (c) Sebastian Blatt 2011, 2012, 2013
+%  copyright  (c) Sebastian Blatt 2011, 2012, 2013, 2014
 
 function fitresult = Fit2D(data, model)
   % Convenience wrapper around 2D fits to DATA. MODEL is a string switching
@@ -30,7 +30,7 @@ function fitresult = Fit2D(data, model)
   % Need this kludge, otherwise the inline functions will fail, since
   % INLINEEVAL is used and the 'private' subdirectory does not seem to be
   % accessible from the inline function.
-  addpath(fullfile('code', 'Fit_Functions'));
+  addpath(fullfile('matlab-fit', 'Fit_Functions'));
 
   switch model
    case 'Gauss2D'
